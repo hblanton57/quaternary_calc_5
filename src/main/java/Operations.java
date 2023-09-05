@@ -1,7 +1,12 @@
 public class Operations {
-    public void Addition(){
-
-        return ;
+    public int Addition(int number){
+        return number + number;
+    }
+    public int multiple(int number){
+        return number *2;
+    }
+    public int division(int number){
+        return number/2;
     }
     public double squareRoute(double number){
         return Math.sqrt(number);
