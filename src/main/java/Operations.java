@@ -1,12 +1,18 @@
 public class Operations {
-    public int Addition(int number){
-        return number + number;
+    public int Addition(int number1, int number2){
+        return number1 + number2;
     }
-    public int multiple(int number){
-        return number *2;
+    public int multiple(int number1, int number2){
+        return number1 * number2;
     }
-    public int division(int number){
-        return number/2;
+    public int subtraction(int number1, int number2){
+        return number1 - number2;
+    }
+    public double division(int number1, int number2){
+        if(number2 == 0){
+            throw new ArithmeticException("Division by zero not allowed bud");
+        }
+        return (double) number1/number2;
     }
     public double squareRoute(double number){
         return Math.sqrt(number);
