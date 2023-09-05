@@ -3,10 +3,10 @@ public class Operations {
 
         return ;
     }
-    public double squareRoute(int number){
+    public double squareRoute(double number){
         return Math.sqrt(number);
     }
-    public double square(int number){
+    public double square(double number){
         return Math.pow(number, 2);
     }
 }
