@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a1543d58-007d-4327-93fe-f0d1885144a0" name="Changes" comment="First Commit, and convert to quarternary working." />
+    <list default="true" id="a1543d58-007d-4327-93fe-f0d1885144a0" name="Changes" comment="accept user input">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Operations.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/QuartToDeci.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/operationsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/QuarternaryCalc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/QuarternaryCalc.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,19 +39,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.QuarternaryCalc">
     <configuration name="QuarternaryCalc" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="QuarternaryCalc" />
       <module name="quarternaryCalculator_hincks_yeager_nolte_blanton_steinfield.main" />
@@ -54,8 +59,32 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="calculatorTest.testQuarternary" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;calculatorTest.testQuarternary&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.calculatorTest.testQuarternary" />
         <item itemvalue="Application.QuarternaryCalc" />
       </list>
     </recent_temporary>
@@ -76,7 +105,21 @@
       <option name="project" value="LOCAL" />
       <updated>1693934161857</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Pushing Gradle and some formatting">
+      <created>1693939897501</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1693939897501</updated>
+    </task>
+    <task id="LOCAL-00003" summary="accept user input">
+      <created>1693941153212</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1693941153212</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -104,6 +147,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First Commit, and convert to quarternary working." />
-    <option name="LAST_COMMIT_MESSAGE" value="First Commit, and convert to quarternary working." />
+    <MESSAGE value="Pushing Gradle and some formatting" />
+    <MESSAGE value="accept user input" />
+    <option name="LAST_COMMIT_MESSAGE" value="accept user input" />
   </component>
 </project>
