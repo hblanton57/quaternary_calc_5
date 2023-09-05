@@ -3,4 +3,7 @@ public class Operations {
 
         return ;
     }
+    public double squareRoute(int number){
+        return Math.sqrt(number);
+    }
 }
