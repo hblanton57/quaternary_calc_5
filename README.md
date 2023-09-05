@@ -8,5 +8,5 @@
       haley:
       megan:
       conner:
-    medium:
+    medium: 
     Discussed:
