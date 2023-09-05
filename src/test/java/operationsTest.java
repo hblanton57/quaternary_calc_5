@@ -15,4 +15,15 @@ public class operationsTest {
         double result = operations.squareRoute(67);
         Assertions.assertEquals(8.18535277187245, result);
     }
+
+    @Test
+    public void testSquare() {
+        double result = operations.square(5);
+        Assertions.assertEquals(25, result);
+    }
+    @Test
+    public void testSquare2() {
+        double result = operations.square(15);
+        Assertions.assertEquals(225, result);
+    }
 }
