@@ -4,6 +4,7 @@ import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.control.ToggleButton;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
@@ -19,6 +20,9 @@ public class Main extends Application {
     Button btnDivide;
     Button btnMultiply;
     Button btnEquals;
+    ToggleButton btnToggleDecimal;
+    ToggleButton btnToggleQuat;
+
 
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -50,6 +54,10 @@ public class Main extends Application {
         btnMultiply.setMinWidth(70);
         btnEquals = new Button("=");
         btnEquals.setMinWidth(150);
+        btnToggleDecimal = new ToggleButton("Decimal");
+        btnToggleDecimal.setMinWidth(70);
+        btnToggleQuat = new ToggleButton("Quaternary");
+        btnToggleQuat.setMinWidth(70);
 
         //Add components
         grid.add(calculatorDisplay, 0, 0, 4, 2);
@@ -62,6 +70,9 @@ public class Main extends Application {
         grid.add(btnDivide, 2, 4, 2, 1);
         grid.add(btnMultiply, 2, 5, 2, 1);
         grid.add(btnEquals, 0, 6, 4, 1);
+        grid.add(btnToggleDecimal, 0, 7, 2, 1);
+        grid.add(btnToggleQuat, 2, 7, 2, 1);
+
 
         Scene scene = new Scene(grid, 250, 250);
         primaryStage.setScene(scene);
