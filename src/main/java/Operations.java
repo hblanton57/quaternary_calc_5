@@ -15,6 +15,9 @@ public class Operations {
         return (double) number1/number2;
     }
     public double squareRoute(double number){
+        if (number < 0 ){
+            throw new ArithmeticException("square root of negative numbers not allowed bud");
+        }
         return Math.sqrt(number);
     }
     public double square(double number){
