@@ -5,8 +5,8 @@ public class calculatorTest {
     public DeciToQuart calc = new DeciToQuart();
     @Test
     public void testQuarternary() {
-        int result = calc.converter("321");
-        Assertions.assertEquals(57, result);
+        int result = calc.toQuart(57);
+        Assertions.assertEquals(321, result);
     }
     @Test
     public void testDeci(){

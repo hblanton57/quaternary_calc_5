@@ -1,11 +1,6 @@
 public class QuartToDeci {
 
-    public static int quartToDeci(String input){
-        int decimalNum = 0;
-        for (int i = input.length()-1; i >= 0; i--){
-            int digit = Character.getNumericValue(input.charAt(i));
-            decimalNum += digit * Math.pow(4,input.length()-1-i);
-        }
-        return decimalNum;
+    public static int quartToDeci(String input) {
+        return Integer.parseInt(String.valueOf(input),4);
     }
 }
