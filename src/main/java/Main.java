@@ -20,6 +20,8 @@ public class Main extends Application {
     Button btnSubtract;
     Button btnDivide;
     Button btnMultiply;
+    Button btnSquare;
+    Button btnSquareRoot;
     Button btnEquals;
     ToggleButton btnToggleDecimal;
     ToggleButton btnToggleQuat;
@@ -53,6 +55,10 @@ public class Main extends Application {
         btnDivide.setMinWidth(70);
         btnMultiply = new Button("*");
         btnMultiply.setMinWidth(70);
+        btnSquare = new Button("Square");
+        btnSquare.setMinWidth(70);
+        btnSquareRoot = new Button("Sq. Root");
+        btnSquareRoot.setMinWidth(70);
         btnEquals = new Button("=");
         btnEquals.setMinWidth(150);
         btnToggleDecimal = new ToggleButton("Decimal");
@@ -74,12 +80,14 @@ public class Main extends Application {
         grid.add(btnSubtract, 2, 3, 2, 1);
         grid.add(btnDivide, 2, 4, 2, 1);
         grid.add(btnMultiply, 2, 5, 2, 1);
-        grid.add(btnEquals, 0, 6, 4, 1);
-        grid.add(btnToggleDecimal, 0, 7, 2, 1);
-        grid.add(btnToggleQuat, 2, 7, 2, 1);
+        grid.add(btnSquare, 0, 6, 2, 1);
+        grid.add(btnSquareRoot, 2, 6, 2, 1);
+        grid.add(btnEquals, 0, 7, 4, 1);
+        grid.add(btnToggleDecimal, 0, 8, 2, 1);
+        grid.add(btnToggleQuat, 2, 8, 2, 1);
 
         //Create and display scene
-        Scene scene = new Scene(grid, 250, 250);
+        Scene scene = new Scene(grid, 300, 300);
         primaryStage.setScene(scene);
         primaryStage.show();
     }
