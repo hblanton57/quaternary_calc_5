@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a1543d58-007d-4327-93fe-f0d1885144a0" name="Changes" comment="Add basic display to GUI">
+    <list default="true" id="a1543d58-007d-4327-93fe-f0d1885144a0" name="Changes" comment="Add toggle buttons">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
     </list>
@@ -67,7 +67,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/hblan/Desktop/BSU/Old Classes/CS222/SillyMethod",
+    "last_opened_file_path": "C:/Users/hblan/Desktop/BSU/CS495/quaternary_calc_5",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -116,6 +116,17 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.quaternary_calc_5 [run]" />
@@ -156,7 +167,15 @@
       <option name="project" value="LOCAL" />
       <updated>1693959998902</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Add toggle buttons">
+      <option name="closed" value="true" />
+      <created>1693960788090</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1693960788090</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -186,7 +205,8 @@
     <MESSAGE value="First Commit, and convert to quarternary working." />
     <MESSAGE value="Update gradle for javaFX" />
     <MESSAGE value="Add basic display to GUI" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add basic display to GUI" />
+    <MESSAGE value="Add toggle buttons" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add toggle buttons" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
