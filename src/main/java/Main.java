@@ -101,6 +101,9 @@ public class Main extends Application {
         btnSubtract.setOnAction(event);
         btnMultiply.setOnAction(event);
         btnDivide.setOnAction(event);
+        btnSquare.setOnAction(event1);
+        btnSquareRoot.setOnAction(event1);
+        btnEquals.setOnAction(event1);
 
 
         //Create and display scene
@@ -120,6 +123,33 @@ public class Main extends Application {
     }
 
 
+    EventHandler<ActionEvent> event1 = new EventHandler<ActionEvent>() {
+        @Override
+        public void handle(ActionEvent event1) {
+            double results = 0;
+            Operations operations = new Operations();
+            DeciToQuart deciToQuart  =new DeciToQuart();
+            QuartToDeci.quartToDeci(numList1);
+            Button clickedButton = (Button) event1.getSource();
+            String buttonText = clickedButton.getText();
+            if (buttonText == "="){
+                int num1 = QuartToDeci.quartToDeci(numList1);
+                int num2 = QuartToDeci.quartToDeci(numList2);
+                if (operator == "+"){
+
+                   results = operations.Addition(num1, num2);
+                }
+                if (operator == "-"){
+                    results = operations.subtraction(QuartToDeci.quartToDeci(numList1), QuartToDeci.quartToDeci(numList2));
+                }
+                if (operator == "*"){
+                    results = operations.multiple(QuartToDeci.quartToDeci(numList1), QuartToDeci.quartToDeci(numList2));
+                }
+            }
+            String finalResult = String.valueOf(deciToQuart.toQuart((int) results));
+            calculatorDisplay.setText(finalResult);
+            }
+        };
 
     EventHandler<ActionEvent> event = new EventHandler<ActionEvent>() {
         @Override
