@@ -1,2 +1,17 @@
 # quaternary_calc_5
-date:09/05/2023 time:2:41pm - 4:30pm members: heidi: brennan: haley: megan: conner: medium: In person Discussed:
+
+Meeting 1
+--------------
+Date: 09/05/2023
+Time: 2:41 - 4:30 PM
+Members: Heidi, Brennan, Haley, Megan, Connor
+Medium: In person
+Discussed: 
+
+Meeting 2
+-------------
+Date: 9/7/2023
+Time: 2:00 - PM
+Members: Heidi, Brennan, Haley, Megan, Connor
+Medium: In person
+Discussed: 
