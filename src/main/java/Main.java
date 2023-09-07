@@ -1,4 +1,6 @@
 import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -9,7 +11,12 @@ import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
+import java.util.Objects;
+
 public class Main extends Application {
+    String numList1 = "";
+    String operator = "";
+    String numList2 = "";
 
     TextField calculatorDisplay;
     Button btnZero;
@@ -86,6 +93,16 @@ public class Main extends Application {
         grid.add(btnToggleDecimal, 0, 8, 2, 1);
         grid.add(btnToggleQuat, 2, 8, 2, 1);
 
+        btnZero.setOnAction(event);
+        btnOne.setOnAction(event);
+        btnTwo.setOnAction(event);
+        btnThree.setOnAction(event);
+        btnAdd.setOnAction(event);
+        btnSubtract.setOnAction(event);
+        btnMultiply.setOnAction(event);
+        btnDivide.setOnAction(event);
+
+
         //Create and display scene
         Scene scene = new Scene(grid, 300, 300);
         primaryStage.setScene(scene);
@@ -94,11 +111,39 @@ public class Main extends Application {
 
     private void handleEqualButtonClick() {
         //TODO: Need to add functionality
+
     }
 
     private void handleNumberClick() {
         //TODO: Need to add functionality
+
     }
+
+
+
+    EventHandler<ActionEvent> event = new EventHandler<ActionEvent>() {
+        @Override
+        public void handle(ActionEvent event) {
+            //calculatorDisplay.setText("hi");
+            Button clickedButton = (Button) event.getSource();
+            String buttonText = clickedButton.getText();
+            boolean b = Objects.equals(buttonText, "0") || Objects.equals(buttonText, "1") ||
+                    Objects.equals(buttonText, "2") || Objects.equals(buttonText, "3");
+            if (b && Objects.equals(operator, "")) {
+                numList1 += buttonText;
+                calculatorDisplay.setText(numList1);
+            }
+            if(Objects.equals(buttonText, "+") || Objects.equals(buttonText, "-") ||
+                    Objects.equals(buttonText, "*") || Objects.equals(buttonText, "/")) {
+                operator = buttonText;
+                calculatorDisplay.setText(numList1 + operator);
+            }
+            if(b && !Objects.equals(operator, "")) {
+                numList2 += buttonText;
+                calculatorDisplay.setText(numList1 + operator + numList2);
+            }
+        }
+    };
 
     public static void main(String[] args) {
         launch();
