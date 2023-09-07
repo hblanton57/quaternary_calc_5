@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a1543d58-007d-4327-93fe-f0d1885144a0" name="Changes" comment="Add toggle buttons">
+    <list default="true" id="a1543d58-007d-4327-93fe-f0d1885144a0" name="Changes" comment="Update toggle button features - Add to group and single selection">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
     </list>
@@ -67,7 +67,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/hblan/Desktop/BSU/CS495/quaternary_calc_5",
+    "last_opened_file_path": "C:/Users/hblan/Desktop/BSU/Old Classes/CS222/SillyMethod",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -175,7 +175,15 @@
       <option name="project" value="LOCAL" />
       <updated>1693960788090</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Update toggle button features - Add to group and single selection">
+      <option name="closed" value="true" />
+      <created>1694099402654</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1694099402654</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -206,7 +214,8 @@
     <MESSAGE value="Update gradle for javaFX" />
     <MESSAGE value="Add basic display to GUI" />
     <MESSAGE value="Add toggle buttons" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add toggle buttons" />
+    <MESSAGE value="Update toggle button features - Add to group and single selection" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update toggle button features - Add to group and single selection" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

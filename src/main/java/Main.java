@@ -66,9 +66,9 @@ public class Main extends Application {
 
         //Add components
         grid.add(calculatorDisplay, 0, 0, 4, 2);
-        grid.add(btnZero, 0,2, 2, 1);
+        grid.add(btnZero, 0, 2, 2, 1);
         grid.add(btnOne, 0, 3, 2, 1);
-        grid.add(btnTwo, 0,4, 2, 1);
+        grid.add(btnTwo, 0, 4, 2, 1);
         grid.add(btnThree, 0, 5, 2, 1);
         grid.add(btnAdd, 2, 2, 2, 1);
         grid.add(btnSubtract, 2, 3, 2, 1);
@@ -78,10 +78,18 @@ public class Main extends Application {
         grid.add(btnToggleDecimal, 0, 7, 2, 1);
         grid.add(btnToggleQuat, 2, 7, 2, 1);
 
-
+        //Create and display scene
         Scene scene = new Scene(grid, 250, 250);
         primaryStage.setScene(scene);
         primaryStage.show();
+    }
+
+    private void handleEqualButtonClick() {
+        //TODO: Need to add functionality
+    }
+
+    private void handleNumberClick() {
+        //TODO: Need to add functionality
     }
 
     public static void main(String[] args) {
