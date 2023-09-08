@@ -10,8 +10,6 @@ import javafx.scene.control.ToggleButton;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
-
-import javax.swing.*;
 import java.util.Objects;
 
 public class Main extends Application {
@@ -153,7 +151,7 @@ public class Main extends Application {
             if (inQuart == 1 && !Objects.equals(numList1, "")) {
                 num1 = QuartToDeci.quartToDeci(numList1);
             } else {
-                if (Objects.equals(numList1, "") && !numList1.equals("")) {
+                if (!numList1.equals("")) {
                     num1 = Integer.parseInt(numList1);
                 }
                 else {
@@ -184,6 +182,7 @@ public class Main extends Application {
             numList1 = String.valueOf(deciToQuart.toQuart((int) results));
             operator = "";
             numList2 = "";
+            inQuart = 1;
             calculatorDisplay.setText(numList1);
         }
     };
@@ -214,8 +213,6 @@ public class Main extends Application {
 
     EventHandler<ActionEvent> event3 = new EventHandler<>() {
         public void handle(ActionEvent event){
-
-        Button clickedbutton = (Button) event.getSource();
         calculatorDisplay.clear();
         numList1 = "";
         numList2 = "";
