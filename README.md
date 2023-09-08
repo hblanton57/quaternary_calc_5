@@ -23,18 +23,35 @@ Meeting 3
 -------------
 Date: 9/8/2023 (Friday)<br>
 Time: 2:50PM - PM <br>
-Members: Brennan, Haley, Megan <br>
+Members: Heidi, Brennan, Haley, Megan <br>
 Medium: In person <br>
-Discussed: Megan finished square operation, square root operation, and toggle buttons last night. Add "clear" button and features to prevent user error.
+Discussed: Megan finished square operation, square root operation, and toggle buttons last night. Added "clear" button and features to prevent user error. Added more operations tests. Error handling. Created manual
 
 Assignments throughout Project
 -------------
 Heidi = Operations, README, <br>
-Brennan = Original commit, decimal to quaternary class and test<br>
-Haley = GUI, README, <br>
+Brennan = Original commit, decimal to quaternary class and tests, GUI (clear button), quaternary to decimal to quaternary tests, <br>
+Haley = GUI, README, Manual<br>
 Megan = Square and square root class and tests <br>
 Connor = Quaternary to decimal class and tests, operations <br>
 Group = Connect logic to GUI <br>
+
+Required Dependencies
+-------------
+For build.gradle file, the following will need added:
+
+plugins { <br>
+id 'java' <br>
+id 'org.openjfx.javafxplugin' version '0.0.13' <br>
+id 'application' <br>
+} <br>
+
+javafx { <br>
+version = '18.0.1' <br>
+modules = [ 'javafx.controls', 'javafx.fxml' ] <br>
+} <br>
+
+mainClassName = 'Main' <br>
 
 MANUAL
 ------------
