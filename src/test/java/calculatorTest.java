@@ -9,6 +9,11 @@ public class calculatorTest {
         Assertions.assertEquals(321, result);
     }
     @Test
+    public void testQuarternary2() {
+        int result = calc.toQuart(15);
+        Assertions.assertEquals(33, result);
+    }
+    @Test
     public void testDeci(){
         Assertions.assertEquals(10,QuartToDeci.quartToDeci(String.valueOf(22)));
         Assertions.assertEquals(13,QuartToDeci.quartToDeci(String.valueOf(31)));

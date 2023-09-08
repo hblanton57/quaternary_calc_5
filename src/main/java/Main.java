@@ -132,19 +132,27 @@ public class Main extends Application {
             QuartToDeci.quartToDeci(numList1);
             Button clickedButton = (Button) event1.getSource();
             String buttonText = clickedButton.getText();
-            if (buttonText == "="){
+            if (Objects.equals(buttonText, "=")){
                 int num1 = QuartToDeci.quartToDeci(numList1);
                 int num2 = QuartToDeci.quartToDeci(numList2);
-                if (operator == "+"){
+                if (Objects.equals(operator, "+")){
 
                    results = operations.Addition(num1, num2);
                 }
-                if (operator == "-"){
+                if (Objects.equals(operator, "-")){
                     results = operations.subtraction(QuartToDeci.quartToDeci(numList1), QuartToDeci.quartToDeci(numList2));
                 }
-                if (operator == "*"){
+                if (Objects.equals(operator, "*")){
                     results = operations.multiple(QuartToDeci.quartToDeci(numList1), QuartToDeci.quartToDeci(numList2));
                 }
+            }
+            if (Objects.equals(buttonText, "Square")){
+                int num1 = QuartToDeci.quartToDeci(numList1);
+                results = operations.square(num1);
+            }
+            if (Objects.equals(buttonText, "Sq. Root")){
+                int num1 = QuartToDeci.quartToDeci(numList1);
+                results = operations.squareRoute(num1);
             }
             String finalResult = String.valueOf(deciToQuart.toQuart((int) results));
             calculatorDisplay.setText(finalResult);
