@@ -150,22 +150,29 @@ public class Main extends Application {
             Button clickedButton = (Button) event1.getSource();
             String buttonText = clickedButton.getText();
             int num1;
-            if (inQuart == 1) {
+            if (inQuart == 1 && !Objects.equals(numList1, "")) {
                 num1 = QuartToDeci.quartToDeci(numList1);
             } else {
-                num1 = Integer.parseInt(numList1);
+                if (Objects.equals(numList1, "") && !numList1.equals("")) {
+                    num1 = Integer.parseInt(numList1);
+                }
+                else {
+                    num1 = 0;
+                }
             }
             if (Objects.equals(buttonText, "=")) {
                 int num2 = QuartToDeci.quartToDeci(numList2);
                 if (Objects.equals(operator, "+")) {
-
                     results = operations.Addition(num1, num2);
                 }
                 if (Objects.equals(operator, "-")) {
-                    results = operations.subtraction(QuartToDeci.quartToDeci(numList1), QuartToDeci.quartToDeci(numList2));
+                    results = operations.subtraction(num1, num2);
                 }
                 if (Objects.equals(operator, "*")) {
-                    results = operations.multiple(QuartToDeci.quartToDeci(numList1), QuartToDeci.quartToDeci(numList2));
+                    results = operations.multiple(num1, num2);
+                }
+                if (Objects.equals(operator, "/")){
+                    results = operations.division(num1, num2);
                 }
             }
             if (Objects.equals(buttonText, "Square")) {
@@ -193,8 +200,8 @@ public class Main extends Application {
                 numList1 += buttonText;
                 calculatorDisplay.setText(numList1);
             }
-            if (Objects.equals(buttonText, "+") || Objects.equals(buttonText, "-") ||
-                    Objects.equals(buttonText, "*") || Objects.equals(buttonText, "/")) {
+            if ((Objects.equals(buttonText, "+") || Objects.equals(buttonText, "-") ||
+                    Objects.equals(buttonText, "*") || Objects.equals(buttonText, "/")) && !Objects.equals(numList1, "")) {
                 operator = buttonText;
                 calculatorDisplay.setText(numList1 + operator);
             }
