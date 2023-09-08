@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 public class DeciToQuart {
     public int toQuart(int input){
         if (input == 0){

@@ -10,13 +10,13 @@ import javafx.scene.control.ToggleButton;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
-
 import java.util.Objects;
 
 public class Main extends Application {
     String numList1 = "";
     String operator = "";
     String numList2 = "";
+    int inQuart = 1;
 
     TextField calculatorDisplay;
     Button btnZero;
@@ -31,11 +31,10 @@ public class Main extends Application {
     Button btnSquareRoot;
     Button btnEquals;
     ToggleButton btnToggleDecimal;
-    ToggleButton btnToggleQuat;
-
+    ToggleButton btnToggleQuart;
 
     @Override
-    public void start(Stage primaryStage) throws Exception {
+    public void start(Stage primaryStage) {
         primaryStage.setTitle("Quaternary Calculator");
 
         GridPane grid = new GridPane();
@@ -70,12 +69,12 @@ public class Main extends Application {
         btnEquals.setMinWidth(150);
         btnToggleDecimal = new ToggleButton("Decimal");
         btnToggleDecimal.setMinWidth(70);
-        btnToggleQuat = new ToggleButton("Quaternary");
-        btnToggleQuat.setMinWidth(70);
+        btnToggleQuart = new ToggleButton("Quaternary");
+        btnToggleQuart.setMinWidth(70);
         ToggleGroup group = new ToggleGroup();
         btnToggleDecimal.setToggleGroup(group);
-        btnToggleQuat.setToggleGroup(group);
-        btnToggleDecimal.setSelected(true);
+        btnToggleQuart.setToggleGroup(group);
+        btnToggleQuart.setSelected(true);
 
         //Add components
         grid.add(calculatorDisplay, 0, 0, 4, 2);
@@ -91,7 +90,7 @@ public class Main extends Application {
         grid.add(btnSquareRoot, 2, 6, 2, 1);
         grid.add(btnEquals, 0, 7, 4, 1);
         grid.add(btnToggleDecimal, 0, 8, 2, 1);
-        grid.add(btnToggleQuat, 2, 8, 2, 1);
+        grid.add(btnToggleQuart, 2, 8, 2, 1);
 
         btnZero.setOnAction(event);
         btnOne.setOnAction(event);
@@ -104,6 +103,8 @@ public class Main extends Application {
         btnSquare.setOnAction(event1);
         btnSquareRoot.setOnAction(event1);
         btnEquals.setOnAction(event1);
+        btnToggleDecimal.setOnAction(event2);
+        btnToggleQuart.setOnAction(event2);
 
 
         //Create and display scene
@@ -112,54 +113,68 @@ public class Main extends Application {
         primaryStage.show();
     }
 
-    private void handleEqualButtonClick() {
-        //TODO: Need to add functionality
+    EventHandler<ActionEvent> event2 = new EventHandler<>() {
+        @Override
+        public void handle(ActionEvent event2) {
+            DeciToQuart deciToQuart = new DeciToQuart();
+            ToggleButton clickedButton = (ToggleButton) event2.getSource();
+            String buttonText = clickedButton.getText();
+            if (Objects.equals(buttonText, "Decimal") && inQuart == 1 && Objects.equals(operator, "") &&
+                    Objects.equals(numList2, "") && !Objects.equals(numList1, "")) {
+                numList1 = String.valueOf(QuartToDeci.quartToDeci(numList1));
+                inQuart = 0;
+                calculatorDisplay.setText(numList1);
+            }
+            if (Objects.equals(buttonText, "Quaternary") && inQuart == 0 && Objects.equals(operator, "") &&
+                    Objects.equals(numList2, "") && !Objects.equals(numList1, "")) {
+                numList1 = String.valueOf(deciToQuart.toQuart(Integer.parseInt(numList1)));
+                inQuart = 1;
+                calculatorDisplay.setText(numList1);
+            }
+        }
+    };
 
-    }
-
-    private void handleNumberClick() {
-        //TODO: Need to add functionality
-
-    }
-
-
-    EventHandler<ActionEvent> event1 = new EventHandler<ActionEvent>() {
+    EventHandler<ActionEvent> event1 = new EventHandler<>() {
         @Override
         public void handle(ActionEvent event1) {
             double results = 0;
             Operations operations = new Operations();
-            DeciToQuart deciToQuart  =new DeciToQuart();
-            QuartToDeci.quartToDeci(numList1);
+            DeciToQuart deciToQuart = new DeciToQuart();
             Button clickedButton = (Button) event1.getSource();
             String buttonText = clickedButton.getText();
-            if (Objects.equals(buttonText, "=")){
-                int num1 = QuartToDeci.quartToDeci(numList1);
+            int num1;
+            if (inQuart == 1) {
+                num1 = QuartToDeci.quartToDeci(numList1);
+            } else {
+                num1 = Integer.parseInt(numList1);
+            }
+            if (Objects.equals(buttonText, "=")) {
                 int num2 = QuartToDeci.quartToDeci(numList2);
-                if (Objects.equals(operator, "+")){
+                if (Objects.equals(operator, "+")) {
 
-                   results = operations.Addition(num1, num2);
+                    results = operations.Addition(num1, num2);
                 }
-                if (Objects.equals(operator, "-")){
+                if (Objects.equals(operator, "-")) {
                     results = operations.subtraction(QuartToDeci.quartToDeci(numList1), QuartToDeci.quartToDeci(numList2));
                 }
-                if (Objects.equals(operator, "*")){
+                if (Objects.equals(operator, "*")) {
                     results = operations.multiple(QuartToDeci.quartToDeci(numList1), QuartToDeci.quartToDeci(numList2));
                 }
             }
-            if (Objects.equals(buttonText, "Square")){
-                int num1 = QuartToDeci.quartToDeci(numList1);
+            if (Objects.equals(buttonText, "Square")) {
                 results = operations.square(num1);
             }
-            if (Objects.equals(buttonText, "Sq. Root")){
-                int num1 = QuartToDeci.quartToDeci(numList1);
+            if (Objects.equals(buttonText, "Sq. Root")) {
                 results = operations.squareRoute(num1);
             }
-            String finalResult = String.valueOf(deciToQuart.toQuart((int) results));
-            calculatorDisplay.setText(finalResult);
-            }
-        };
+            numList1 = String.valueOf(deciToQuart.toQuart((int) results));
+            operator = "";
+            numList2 = "";
+            calculatorDisplay.setText(numList1);
+        }
+    };
 
-    EventHandler<ActionEvent> event = new EventHandler<ActionEvent>() {
+    EventHandler<ActionEvent> event = new EventHandler<>() {
         @Override
         public void handle(ActionEvent event) {
             //calculatorDisplay.setText("hi");
@@ -171,12 +186,12 @@ public class Main extends Application {
                 numList1 += buttonText;
                 calculatorDisplay.setText(numList1);
             }
-            if(Objects.equals(buttonText, "+") || Objects.equals(buttonText, "-") ||
+            if (Objects.equals(buttonText, "+") || Objects.equals(buttonText, "-") ||
                     Objects.equals(buttonText, "*") || Objects.equals(buttonText, "/")) {
                 operator = buttonText;
                 calculatorDisplay.setText(numList1 + operator);
             }
-            if(b && !Objects.equals(operator, "")) {
+            if (b && !Objects.equals(operator, "")) {
                 numList2 += buttonText;
                 calculatorDisplay.setText(numList1 + operator + numList2);
             }

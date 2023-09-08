@@ -1,15 +1,15 @@
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class calculatorTest {
+public class CalculatorTest {
     public DeciToQuart calc = new DeciToQuart();
     @Test
-    public void testQuarternary() {
+    public void testQuaternary() {
         int result = calc.toQuart(57);
         Assertions.assertEquals(321, result);
     }
     @Test
-    public void testQuarternary2() {
+    public void testQuaternary2() {
         int result = calc.toQuart(15);
         Assertions.assertEquals(33, result);
     }
