@@ -30,10 +30,10 @@ Discussed: Megan finished square operation, square root operation, and toggle bu
 Assignments throughout Project
 -------------
 Heidi = Operations, README, <br>
-Brennan = Original commit, decimal to quaternary class and tests, GUI (clear button), quaternary to decimal to quaternary tests, <br>
-Haley = GUI, README, Manual<br>
-Megan = Square and square root class and tests <br>
-Connor = Quaternary to decimal class and tests, operations <br>
+Brennan = Original commit, deci to quat, operations, GUI (clear button), calculator tests, operations tests<br>
+Haley = GUI, Main, README, Manual<br>
+Megan = Square and square root class and tests, deci to quat, operations tests, calculator tests <br>
+Connor = Operations, quart to deci, operation tests, calculator tests <br>
 Group = Connect logic to GUI <br>
 
 Required Dependencies
