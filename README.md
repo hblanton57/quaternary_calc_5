@@ -22,10 +22,10 @@ Discussed: Group programmed to connect GUI to logic portion of program, fixed Gi
 Meeting 3
 -------------
 Date: 9/8/2023 (Friday)<br>
-Time: 2:50PM - PM <br>
+Time: 2:50PM - 4:00 PM <br>
 Members: Heidi, Brennan, Haley, Megan <br>
 Medium: In person <br>
-Discussed: Megan finished square operation, square root operation, and toggle buttons last night. Added "clear" button and features to prevent user error. Added more operations tests. Error handling. Created manual
+Discussed: Megan finished square operation, square root operation, and toggle buttons last night. Added "clear" button and features to prevent user error. Added more operations tests. Error handling. Created manual.
 
 Assignments throughout Project
 -------------
@@ -55,4 +55,19 @@ mainClassName = 'Main' <br>
 
 MANUAL
 ------------
+* Open Gradle and locate the run function from Project -> Tasks -> application -> run <br>
+* Select run <br>
+![img.png](gradle.png)
+* Initial launch of application will show calculator <br>
+![img.png](calcIntialState.png)
+* Select digit (0-3) and then select operator <br> Up to 2 digits can be selected per equation<br>
+![img.png](calcEquation.png)
+* Select the equals (=) button to obtain result <br>
+![img.png](calcResult.png)
+* Result can be converted from quaternary to decimal and vice versa by using 'Decimal' and 'Quaternary' buttons<br>
+* Result can also be squared or square rooted by using the 'Square' and 'Sq. Root' buttons <br>
+* To clear equation, select the 'C' button <br>
+![img.png](calcClear.png)
+
+
 
