@@ -10,6 +10,8 @@ import javafx.scene.control.ToggleButton;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
+
+import javax.swing.*;
 import java.util.Objects;
 
 public class Main extends Application {
@@ -19,6 +21,7 @@ public class Main extends Application {
     int inQuart = 1;
 
     TextField calculatorDisplay;
+    Button btnClear;
     Button btnZero;
     Button btnOne;
     Button btnTwo;
@@ -67,6 +70,8 @@ public class Main extends Application {
         btnSquareRoot.setMinWidth(70);
         btnEquals = new Button("=");
         btnEquals.setMinWidth(150);
+        btnClear = new Button("C");
+        btnClear.setMinWidth(150);
         btnToggleDecimal = new ToggleButton("Decimal");
         btnToggleDecimal.setMinWidth(70);
         btnToggleQuart = new ToggleButton("Quaternary");
@@ -78,19 +83,20 @@ public class Main extends Application {
 
         //Add components
         grid.add(calculatorDisplay, 0, 0, 4, 2);
-        grid.add(btnZero, 0, 2, 2, 1);
-        grid.add(btnOne, 0, 3, 2, 1);
-        grid.add(btnTwo, 0, 4, 2, 1);
-        grid.add(btnThree, 0, 5, 2, 1);
-        grid.add(btnAdd, 2, 2, 2, 1);
-        grid.add(btnSubtract, 2, 3, 2, 1);
-        grid.add(btnDivide, 2, 4, 2, 1);
-        grid.add(btnMultiply, 2, 5, 2, 1);
-        grid.add(btnSquare, 0, 6, 2, 1);
-        grid.add(btnSquareRoot, 2, 6, 2, 1);
-        grid.add(btnEquals, 0, 7, 4, 1);
-        grid.add(btnToggleDecimal, 0, 8, 2, 1);
-        grid.add(btnToggleQuart, 2, 8, 2, 1);
+        grid.add(btnClear,0,2,4,2);
+        grid.add(btnZero, 0, 4, 2, 1);
+        grid.add(btnOne, 0, 5, 2, 1);
+        grid.add(btnTwo, 0, 6, 2, 1);
+        grid.add(btnThree, 0, 7, 2, 1);
+        grid.add(btnAdd, 2, 4, 2, 1);
+        grid.add(btnSubtract, 2, 5, 2, 1);
+        grid.add(btnDivide, 2, 6, 2, 1);
+        grid.add(btnMultiply, 2, 7, 2, 1);
+        grid.add(btnSquare, 0, 8, 2, 1);
+        grid.add(btnSquareRoot, 2, 8, 2, 1);
+        grid.add(btnEquals, 0, 9, 4, 1);
+        grid.add(btnToggleDecimal, 0, 10, 2, 1);
+        grid.add(btnToggleQuart, 2, 10, 2, 1);
 
         btnZero.setOnAction(event);
         btnOne.setOnAction(event);
@@ -105,10 +111,11 @@ public class Main extends Application {
         btnEquals.setOnAction(event1);
         btnToggleDecimal.setOnAction(event2);
         btnToggleQuart.setOnAction(event2);
+        btnClear.setOnAction(event3);
 
 
         //Create and display scene
-        Scene scene = new Scene(grid, 300, 300);
+        Scene scene = new Scene(grid, 300, 400);
         primaryStage.setScene(scene);
         primaryStage.show();
     }
@@ -197,6 +204,17 @@ public class Main extends Application {
             }
         }
     };
+
+    EventHandler<ActionEvent> event3 = new EventHandler<>() {
+        public void handle(ActionEvent event){
+
+        Button clickedbutton = (Button) event.getSource();
+        calculatorDisplay.clear();
+        numList1 = "";
+        numList2 = "";
+        operator = "";
+    }
+};
 
     public static void main(String[] args) {
         launch();
